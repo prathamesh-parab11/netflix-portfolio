@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificates</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #c9c9c9;
+      }
+
+      .container {
+        margin-top: 5%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 100px 50px;
+        padding: 100px 50px;
+      }
+
+      .container .card {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 350px;
+        max-width: 100%;
+        height: 300px;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        transition: 0.5s;
+        box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+      }
+
+      .container .card:hover {
+        height: 400px;
+      }
+
+      .container .card .img-box {
+        position: absolute;
+        top: 20px;
+        width: 300px;
+        height: 220px;
+        background: #333;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+
+      .container .card:hover .img-box {
+        top: -100px;
+        scale: 0.75;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+      }
+
+      .container .card .img-box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .container .card .content {
+        position: absolute;
+        top: 252px;
+        width: 100%;
+        height: 35px;
+        padding: 0 30px;
+        text-align: center;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+
+      .container .card:hover .content {
+        top: 130px;
+        height: 250px;
+      }
+
+      .container .card .content h2 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--clr);      }
+
+      .container .card .content p {
+        color: #333;
+      }
+
+      .container .card .content a {
+        position: relative;
+        top: 15px;
+        display: inline-block;
+        padding: 12px 25px;
+        text-decoration: none;
+        background: var(--clr);
+        color: white;
+        font-weight: 500;
+      }
+
+      .container .card .content a:hover {
+        opacity: 0.8;
+      }
+
+      @media (max-width: 480px) {
+        .container .card {
+          width: 230px;
+          border-radius: 15px;
+        }
+
+        .container .card .img-box {
+          width: 185px;
+          border-radius: 10px;
+        }
+
+        .container .card .content p {
+          font-size: 0.8rem;
+        }
+
+        .container .card .content a {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" style="--clr: #009688">
+        <div class="img-box">
+          <img
+            src="novo-nordisk.jpeg"
+          />
+        </div>
+        <div class="content">
+          <h2>Novo Nordisk</h2><br>
+          <p>
+            Donald Duck er en tegnefilm- og tegneseriefigur som ble skapt av
+            amerikaneren Walt Disney og som opptrer i en rekke filmer fra The
+            Walt Disney Company og i den fiktive tegneseriebyen Andeby.
+          </p>
+          <a href="novo-nordisk.jpeg">View Certificate</a>
+        </div>
+      </div>
+      <div class="card" style="--clr: #F08080">
+        <div class="img-box">
+          <img
+            src=""
+          />
+        </div>
+        <div class="content">
+          <h2>Python & C++ Programming</h2><br>
+          <p>
+            Mikke Mus er en av verdens største ikoner. Han er fiktiv, sett
+            boende i den fiktive staten Calisota med sin gode venn Langbein.
+          </p>
+          <a href="">View Certificate</a>
+        </div>
+      </div>
+      <div class="card" style="--clr: #663399">
+        <div class="img-box">
+          <img
+            src=""
+          />
+        </div>
+        <div class="content">
+          <h2>Data Science & Data Analytics</h2><br>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Architecto, hic? Magnam eum error saepe doloribus corrupti repellat
+            quisquam alias doloremque!
+          </p>
+          <a href="">View Certificate</a>
+        </div>
+      </div>
+      <div class="card" style="--clr: #123456">
+        <div class="img-box">
+          <img
+            src="novo-nordisk.jpeg"
+          />
+        </div>
+        <div class="content">
+          <h2>Novo Nordisk</h2><br>
+          <p>
+            Donald Duck er en tegnefilm- og tegneseriefigur som ble skapt av
+            amerikaneren Walt Disney og som opptrer i en rekke filmer fra The
+            Walt Disney Company og i den fiktive tegneseriebyen Andeby.
+          </p>
+          <a href="novo-nordisk.jpeg">View Certificate</a>
+        </div>
+      </div>
+      <div class="card" style="--clr: #8B0000">
+        <div class="img-box">
+          <img
+            src=""
+          />
+        </div>
+        <div class="content">
+          <h2>Python & C++ Programming</h2><br>
+          <p>
+            Mikke Mus er en av verdens største ikoner. Han er fiktiv, sett
+            boende i den fiktive staten Calisota med sin gode venn Langbein.
+          </p>
+          <a href="">View Certificate</a>
+        </div>
+      </div>
+      <div class="card" style="--clr: #556B2F">
+        <div class="img-box">
+          <img
+            src=""
+          />
+        </div>
+        <div class="content">
+          <h2>Data Science & Data Analytics</h2><br>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Architecto, hic? Magnam eum error saepe doloribus corrupti repellat
+            quisquam alias doloremque!
+          </p>
+          <a href="">View Certificate</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

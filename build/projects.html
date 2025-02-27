@@ -7,278 +7,356 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>Projects</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
       body {
-        min-height: 100vh;
         justify-content: center;
         align-items: center;
-        background: #111;
-        transition: 0.5s;
-        font-weight: 400;
-        font-style: normal;
-      }
-
-      body:has(.box[data-color="clr1"]:hover) {
-        background: #636363;
-      }
-      body:has(.box[data-color="clr2"]:hover) {
-        background: #07411a;
-      }
-      body:has(.box[data-color="clr3"]:hover) {
-        background: #321b1b;
-      }
-      body:has(.box[data-color="clr4"]:hover) {
-        background: #7c0d0d;
-      }
-      body:has(.box[data-color="clr5"]:hover) {
-        background: #290f52;
-      }
-      body:has(.box[data-color="clr6"]:hover) {
-        background: #6d5208;
-      }
-
-      section {
-        overflow: hidden;
-        padding-top: 3em;
-      }
-
-      h2 {
-        margin-top: 5%;
-        font-family: "Nosifer", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color: hsl(22, 72%, 50%);
-        font-size: clamp(2rem, 1rem + 4vw, 5rem);
-        text-align: center;
-        line-height: 1.3;
+        min-height: 100vh;
+        background: #c9c9c9;
       }
 
       .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .container .card {
         position: relative;
+        width: 320px;
+        height: 550px;
+        background: #232323;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-top: 7%;
+        margin-left: 5%;
+        margin-bottom: 2%;
+      }
+
+      .container .card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #681111;
+        clip-path: circle(150px at 80% 20%);
+        transition: 0.5s ease-in-out;
+      }
+
+      .container .card:hover:before {
+        clip-path: circle(300px at 80% -20%);
+      }
+
+      .container .card:after {
+        position: absolute;
+        top: 30%;
+        left: 4%;
+        font-size: 8em;
+        font-weight: 800;
+        font-style: italic;
+        color: rgba(255, 255, 25, 0.05);
+      }
+
+      .container .card .imgBx {
+        position: absolute;
+        top: 30%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 220px;
+        transition: 0.5s;
+      }
+
+      .container .card:hover .imgBx {
+        top: 0%;
+        transform: translateY(0%);
+      }
+
+      .container .card .imgBx img {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        width: 250px;
+      }
+
+      .container .card .contentBx {
+        position: absolute;
+        margin-bottom: 35%;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+        text-align: center;
+        transition: 1s;
+      }
+
+      .container .card:hover .contentBx {
+        height: 210px;
+      }
+
+      .container .card .contentBx h2 {
+        padding: 5px;
+        position: relative;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #fff;
+        margin: 0;
+        margin-top: 15%;
+      }
+
+      .container .card .contentBx .size,
+      .container .card .contentBx .color {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 40px;
-        flex-wrap: wrap;
-        padding: 3.25em 0 3em;
+        padding: 8px 20px;
+        transition: 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 10%;
+      }
 
-        .box {
-          position: relative;
-          width: 18.75rem;
-          height: 18.75rem;
-          border-radius: 0.625rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transition: 0.5s;
+      .container .card:hover .contentBx .size {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.5s;
+      }
 
-          .imgBox {
-            position: absolute;
-            inset: 0;
-            border-radius: 0.75rem;
-            border: 0.25rem solid rgba(0, 0, 0, 0.2);
+      .container .card:hover .contentBx .color {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.6s;
+      }
 
-            img {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              transition: 0.5s;
-              border-radius: 0.625rem;
-            }
-          }
+      .container .card .contentBx .size h3,
+      .container .card .contentBx .color h3 {
+        color: #fff;
+        font-weight: 300;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-right: 10px;
+      }
 
-          .glass {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(#fff2, transparent);
-            border: 0.063rem solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0.938rem 0.938rem rgba(0, 0, 0, 0.25);
-            backdrop-filter: blur(0.938rem);
-            border-radius: 0.625rem;
-            overflow: hidden;
-            scale: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.5s;
-            opacity: 0;
+      .container .card .contentBx .size span {
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        font-size: 14px;
+        display: inline-block;
+        color: #111;
+        background: #fff;
+        margin: 0 5px;
+        transition: 0.5s;
+        color: #111;
+        border-radius: 4px;
+        cursor: pointer;
+      }
 
-            &:before {
-              position: absolute;
-              content: "";
-              bottom: 0;
-              width: 100%;
-              height: 2.5rem;
-              background: rgba(255, 255, 255, 0.05);
-            }
+      .container .card .contentBx .size span:hover {
+        background: #9bdc28;
+      }
 
-            h3 {
-              font-size: 1.25rem;
-              color: #fff;
-              text-transform: uppercase;
-              letter-spacing: 0.1em;
-              text-align: center;
-              line-height: 0.8em;
-              font-weight: 500;
-            }
+      .container .card .contentBx .color span {
+        width: 20px;
+        height: 20px;
+        background: #ff0;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+      }
 
-            span {
-              font-size: 0.5em;
-              font-weight: 400;
-            }
+      .container .card .contentBx .color span:nth-child(2) {
+        background: #9bdc28;
+      }
 
-            ul {
-              position: absolute;
-              bottom: 0;
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              gap: 1rem;
+      .container .card .contentBx .color span:nth-child(3) {
+        background: #03a9f4;
+      }
 
-              a {
-                color: #fff8;
-                font-size: 1.25rem;
-                scale: 0;
-                transition: 0.25s;
-                transition-delay: scale calc(0.2s * var(--i));
+      .container .card .contentBx .color span:nth-child(4) {
+        background: #e91e63;
+      }
 
-                &:hover {
-                  color: #fff;
-                }
-              }
-            }
-          }
-          &:hover .imgBox img {
-            opacity: 0.5;
-          }
+      .container .card .contentBx a {
+        display: inline-block;
+        padding: 10px 50px;
+        background: #fff;
+        border-radius: 4px;
+        margin-top: 15px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #111;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: 0.5s;
+        margin-top: 2;
+      }
 
-          &:hover {
-            transform: rotate(-15deg);
-          }
+      .container .card .contentBx a:hover{
+        color: #fff;
+        background-color: #134b70;
+      }
 
-          &:hover .glass {
-            transform: rotate(20deg);
-            scale: 1;
-            opacity: 1;
-          }
+      .container .card:hover .contentBx a {
+        opacity: 1;
+        transform: translateY(0px);
+      }
 
-          &:hover ul a {
-            scale: 1;
-          }
-        }
+      .container .card .contentBx p {
+        color: #fff;
+        font-size: 14px;
+        padding: 0 10px;
+        opacity: 0;
+        transition: 0.5s;
+        visibility: hidden;
+        transform: translateY(20px);
+      }
+
+      .container .card:hover .contentBx p {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+        transition-delay: 0.3s;
+      }
+
+      .contentBx p i {
+        color: #fff;
+        margin-right: 8px;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+
+      .contentBx p i:hover {
+        color: #9bdc28;
       }
     </style>
   </head>
   <body>
-    <section>
-      <!-- <h2>My Projects</h2> -->
-      <div class="container">
-        <div class="box" data-color="clr1">
-          <div class="imgBox">
-            <img src="projects/DNA.webp" alt="DNA" />
-          </div>
-          <div class="glass">
-            <h3>
-              DNA Sequencing of Motor Neuron Diseases<br />
-            </h3>
-            <ul>
-              <a href="https://github.com/prathamesh-parab11/DNA-SEQ-MND-" target="_blank">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </ul>
-          </div>
+    <div class="container">
+      <div class="card">
+        <div class="imgBx">
+          <img src="/projects/text-summary.jpg" />
         </div>
-        <div class="box" data-color="clr2">
-          <div class="imgBox">
-            <img src="projects/potato.webp" alt="Potato" />
-          </div>
-          <div class="glass">
-            <h3>
-              AI-powered Potato Disease Detection with CNNs<br />
-              
-            </h3>
-            <ul>
-              <a href="https://github.com/prathamesh-parab11/cnn-potato-classification" target="_blank">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </ul>
-          </div>
-        </div>
-        <div class="box" data-color="clr3">
-          <div class="imgBox">
-            <img src="projects/text.webp" alt="text" />
-          </div>
-          <div class="glass">
-            <h3>
-              Text Summarization using Natural Language Processing<br />
-              
-            </h3>
-            <ul>
-              <a href="https://github.com/prathamesh-parab11/Text-Summarizer-Project" target="_blank">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </ul>
-          </div>
-        </div>
-        <div class="box" data-color="clr4">
-          <div class="imgBox">
-            <img src="projects/wine.webp" alt="wine" />
-          </div>
-          <div class="glass">
-            <h3>Wine quality detection using ML<br /></h3>
-            <ul>
-              <a href="https://github.com/prathamesh-parab11/Machine-Learning-Project" target="_blank">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </ul>
-          </div>
-        </div>
-        <div class="box" data-color="clr5">
-          <div class="imgBox">
-            <img src="projects/Molecule.webp" alt="Molecule" />
-          </div>
-          <div class="glass">
-            <h3>
-              ML-based Estimation of Delaney Solubility with Molecular
-              Descriptors <br />
-            </h3>
-            <ul>
-              <a href="https://github.com/prathamesh-parab11/delaney-solubility-with-descriptors" target="_blank">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </ul>
-          </div>
-        </div>
-        <div class="box" data-color="clr6">
-          <div class="imgBox">
-            <img src="projects/powerbi.webp" alt="powerbi" />
-          </div>
-          <div class="glass">
-            <h3>
-              Clinical-Data-Handling-and-Automation<br />
-              <!-- <span></span> -->
-            </h3>
-            <ul>
-              <a href="https://github.com/prathamesh-parab11/Clinical-Data-Handling-and-Automation" target="_blank">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </ul>
-          </div>
+        <div class="contentBx">
+          <p>
+            Technologies Used:<br><br>
+            <i class="fab fa-python"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-github"></i>
+          </p>
+          <h2>Text Summarization using Natural Language Processing (NLP)</h2>
+          <a href="https://github.com/prathamesh-parab11/Text-Summarizer-Project">Github</a>
+          <a href="#">Live</a>
         </div>
       </div>
-    </section>
+      <div class="card">
+        <div class="imgBx">
+          <img src="/projects/potato-field.jpg" />
+        </div>
+        <div class="contentBx">
+          <p>
+            Technologies Used:<br><br>
+            <i class="fab fa-python"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-github"></i>
+          </p>
+          <h2>AI-powered Potato Disease Detection with CNNs</h2>
+          <a href="https://github.com/prathamesh-parab11/cnn-potato-classification">Github</a>
+          <a href="#">Live</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imgBx">
+          <img src="/projects/DNA.jpg" />
+        </div>
+        <div class="contentBx">
+          <p>
+            Technologies Used:<br><br>
+            <i class="fab fa-python"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-github"></i>
+          </p>
+          <h2>
+            Linux-based NGS pinpoints shared SNPs for motor neuron diseases
+          </h2>
+          <a href="https://github.com/prathamesh-parab11/DNA-SEQ-MND-">Github</a>
+          <a href="#">Live</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imgBx">
+          <img src="/projects/wine.jpg" />
+        </div>
+        <div class="contentBx">
+          <p>
+            Technologies Used:<br><br>
+            <i class="fab fa-python"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-github"></i>
+          </p>
+          <h2>Wine quality prediction through modular coding using ML</h2>
+          <a href="https://github.com/prathamesh-parab11/Machine-Learning-Project">Github</a>
+          <a href="#">Live</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imgBx">
+          <img src="/projects/novo-nordisk.png" />
+        </div>
+        <div class="contentBx">
+          <p>
+            Technologies Used:<br><br>
+            <i class="fab fa-python"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-github"></i>
+          </p>
+          <h2>Clinical Data Handling and Automation Challenge</h2>
+          <a href="https://github.com/prathamesh-parab11/Clinical-Data-Handling-and-Automation">Github</a>
+          <a href="#">Live</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imgBx">
+          <img src="/projects/molecule.jpg" />
+        </div>
+        <div class="contentBx">
+          <p>
+            Technologies Used:<br><br>
+            <i class="fab fa-python"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-github"></i>
+          </p>
+          <h2>
+            ML-based Estimation of Delaney Solubility with
+            Molecular Descriptors
+          </h2>
+          <a href="https://github.com/prathamesh-parab11/delaney-solubility-with-descriptors">Github</a>
+          <a href="#">Live</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

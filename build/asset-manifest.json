@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.553ebdcf.css",
-    "main.js": "/static/js/main.1a35c101.js",
+    "main.js": "/static/js/main.1d7612c7.js",
     "static/js/453.b0cd7502.chunk.js": "/static/js/453.b0cd7502.chunk.js",
-    "static/media/logo-2.png": "/static/media/logo-2.ab2be80cd95f8f3d0d82.png",
     "static/media/experience.webp": "/static/media/experience.ecf90c399c5943c8e912.webp",
     "static/media/grey.png": "/static/media/grey.bbfd7fb8e095529e355c.png",
     "static/media/blue.png": "/static/media/blue.9b293a4a6ef065903a8f.png",
@@ -12,17 +11,18 @@
     "static/media/yellow.png": "/static/media/yellow.2631c5cf63f02f6bbfbf.png",
     "static/media/skills.webp": "/static/media/skills.6de5da336b125050e82f.webp",
     "static/media/red.png": "/static/media/red.6138d0c52611186c9d03.png",
+    "static/media/logo-2.png": "/static/media/logo-2.5ad93f060c81ac8a0444.png",
     "static/media/contact.webp": "/static/media/contact.57378fe9991d5131ce83.webp",
     "static/media/certificates.webp": "/static/media/certificates.4df918bb467bcacec911.webp",
     "static/media/hobbies.webp": "/static/media/hobbies.23bedddc394283b846b6.webp",
     "static/media/projects.webp": "/static/media/projects.f4718c634289607abec9.webp",
     "index.html": "/index.html",
     "main.553ebdcf.css.map": "/static/css/main.553ebdcf.css.map",
-    "main.1a35c101.js.map": "/static/js/main.1a35c101.js.map",
+    "main.1d7612c7.js.map": "/static/js/main.1d7612c7.js.map",
     "453.b0cd7502.chunk.js.map": "/static/js/453.b0cd7502.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.553ebdcf.css",
-    "static/js/main.1a35c101.js"
+    "static/js/main.1d7612c7.js"
   ]
 }

@@ -5,230 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Certificates</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      @import url(https://fonts.bunny.net/css?family=amita:700);
 
       body {
-        background: #c9c9c9;
+        background-color: #c9c9c9;
+        margin: 0;
+        font-family: Arial, sans-serif;
       }
 
-      .container {
-        margin-top: 5%;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 100px 50px;
-        padding: 100px 50px;
-      }
-
-      .container .card {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        width: 350px;
-        max-width: 100%;
-        height: 300px;
-        background: rgb(255, 255, 255);
-        border-radius: 10px;
-        transition: 0.5s;
-        box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
-      }
-
-      .container .card:hover {
-        height: 400px;
-      }
-
-      .container .card .img-box {
-        position: absolute;
-        top: 20px;
-        width: 300px;
-        height: 220px;
-        background: #333;
-        border-radius: 12px;
-        overflow: hidden;
-        transition: 0.5s;
-      }
-
-      .container .card:hover .img-box {
-        top: -100px;
-        scale: 0.75;
-        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
-      }
-
-      .container .card .img-box img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .container .card .content {
-        position: absolute;
-        top: 252px;
-        width: 100%;
-        height: 35px;
-        padding: 0 30px;
+      .certificates-title {
+        color: #fefae0;
+        font-family: Amita;
+        margin: 20px auto;
+        font-size: 2rem;
         text-align: center;
-        overflow: hidden;
-        transition: 0.5s;
+        border-bottom: 5px double #bc6c25;
+        width: fit-content;
+        padding-bottom: 5px;
       }
 
-      .container .card:hover .content {
-        top: 130px;
-        height: 250px;
+      .certificates-container {
+        margin-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
       }
 
-      .container .card .content h2 {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--clr);      }
-
-      .container .card .content p {
-        color: #333;
+      .certificate-img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border: 5px solid #fefae0;
+        filter: sepia(100%);
+        transition: transform 0.3s ease, filter 0.3s ease;
       }
 
-      .container .card .content a {
-        position: relative;
-        top: 15px;
-        display: inline-block;
-        padding: 12px 25px;
-        text-decoration: none;
-        background: var(--clr);
-        color: white;
-        font-weight: 500;
+      .certificate-img:hover {
+        border-color: #fff;
+        transform: scale(1.05);
+        filter: none;
       }
 
-      .container .card .content a:hover {
-        opacity: 0.8;
-      }
-
-      @media (max-width: 480px) {
-        .container .card {
-          width: 230px;
-          border-radius: 15px;
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .certificates-container {
+          flex-direction: column;
+          align-items: center;
         }
 
-        .container .card .img-box {
-          width: 185px;
-          border-radius: 10px;
+        .certificates-title {
+          font-size: 1.8rem;
         }
 
-        .container .card .content p {
-          font-size: 0.8rem;
-        }
-
-        .container .card .content a {
-          font-size: 0.9rem;
+        .certificate-img {
+          max-width: 90%;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img
-            src="novo-nordisk.jpeg"
-          />
-        </div>
-        <div class="content">
-          <h2>Novo Nordisk</h2><br>
-          <p>
-            Donald Duck er en tegnefilm- og tegneseriefigur som ble skapt av
-            amerikaneren Walt Disney og som opptrer i en rekke filmer fra The
-            Walt Disney Company og i den fiktive tegneseriebyen Andeby.
-          </p>
-          <a href="novo-nordisk.jpeg">View Certificate</a>
-        </div>
-      </div>
-      <div class="card" style="--clr: #F08080">
-        <div class="img-box">
-          <img
-            src=""
-          />
-        </div>
-        <div class="content">
-          <h2>Python & C++ Programming</h2><br>
-          <p>
-            Mikke Mus er en av verdens største ikoner. Han er fiktiv, sett
-            boende i den fiktive staten Calisota med sin gode venn Langbein.
-          </p>
-          <a href="">View Certificate</a>
-        </div>
-      </div>
-      <div class="card" style="--clr: #663399">
-        <div class="img-box">
-          <img
-            src=""
-          />
-        </div>
-        <div class="content">
-          <h2>Data Science & Data Analytics</h2><br>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Architecto, hic? Magnam eum error saepe doloribus corrupti repellat
-            quisquam alias doloremque!
-          </p>
-          <a href="">View Certificate</a>
-        </div>
-      </div>
-      <div class="card" style="--clr: #123456">
-        <div class="img-box">
-          <img
-            src="novo-nordisk.jpeg"
-          />
-        </div>
-        <div class="content">
-          <h2>Novo Nordisk</h2><br>
-          <p>
-            Donald Duck er en tegnefilm- og tegneseriefigur som ble skapt av
-            amerikaneren Walt Disney og som opptrer i en rekke filmer fra The
-            Walt Disney Company og i den fiktive tegneseriebyen Andeby.
-          </p>
-          <a href="novo-nordisk.jpeg">View Certificate</a>
-        </div>
-      </div>
-      <div class="card" style="--clr: #8B0000">
-        <div class="img-box">
-          <img
-            src=""
-          />
-        </div>
-        <div class="content">
-          <h2>Python & C++ Programming</h2><br>
-          <p>
-            Mikke Mus er en av verdens største ikoner. Han er fiktiv, sett
-            boende i den fiktive staten Calisota med sin gode venn Langbein.
-          </p>
-          <a href="">View Certificate</a>
-        </div>
-      </div>
-      <div class="card" style="--clr: #556B2F">
-        <div class="img-box">
-          <img
-            src=""
-          />
-        </div>
-        <div class="content">
-          <h2>Data Science & Data Analytics</h2><br>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Architecto, hic? Magnam eum error saepe doloribus corrupti repellat
-            quisquam alias doloremque!
-          </p>
-          <a href="">View Certificate</a>
-        </div>
-      </div>
+    <!-- <h1 class="certificates-title">My Certificates</h1> -->
+    <div class="certificates-container">
+      <a href="certificates/novo-nordisk.jpeg" target="_blank">
+        <img class="certificate-img" src="certificates/novo-nordisk.jpeg" alt="Clinical Data Handling & Automation Certificate" />
+      </a>
+      <a href="certificates/pckon.jpg" target="_blank">
+        <img class="certificate-img" src="certificates/pckon.jpg" alt="PCKON Certificate" />
+      </a>
+      <a href="certificates/codenera.jpg" target="_blank">
+        <img class="certificate-img" src="certificates/codenera.jpg" alt="Codenera Course Completion" />
+      </a>
+      <a href="certificates/disha.jpg" target="_blank">
+        <img class="certificate-img" src="certificates/disha.jpg" alt="Disha Certificate" />
+      </a>
+      <a href="certificates/codenera_certificate.jpeg" target="_blank">
+        <img class="certificate-img" src="certificates/codenera_certificate.jpeg" alt="Codenera Certificate" />
+      </a>
+      <a href="certificates/powerbi.jpg" target="_blank">
+        <img class="certificate-img" src="certificates/powerbi.jpg" alt="Power BI Certificate" />
+      </a>
     </div>
   </body>
 </html>
